@@ -1,0 +1,55 @@
+*{
+    margin: 10px;
+    padding: 10px;
+}
+body{
+    display: flex;
+    min-height: 650px;
+    flex-direction: column;
+    background-color: rosybrown;
+}
+
+header,footer{
+    background-color: #00bcd4;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex: 2;
+}
+
+main aside {
+    background-color: #008ba3;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main article {
+    background-color: #d81b60;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.kotak {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.kotak img {
+    width: 250px;
+    margin: 2px;
+}
+
+
+
