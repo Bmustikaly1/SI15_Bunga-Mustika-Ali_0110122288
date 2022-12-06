@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 9.4</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="satu" onchange="jumlah()">
+        <br>
+        +
+        <br>
+        <input type="number" id="dua" onchange="jumlah()">
+        <br>
+        =
+        <br>
+        <input type="number" id="hasil">
+    </form>
+    <script>
+        function jumlah() {
+        let s = parseInt (document.getElementById ("satu").value);
+        let d = parseInt (document.getElementById ("dua").value);
+        let h = s+d;
+        document.getElementById("hasil").value = h;
+        }
+    </script>
+</body>
+</html>
