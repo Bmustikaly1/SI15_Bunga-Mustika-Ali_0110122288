@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    
+<script>
+    function valid(){
+        let isi_nama = document.getElementById("nama").value;
+        if (isi_nama == "") {
+            document.getElementById("namaa").innerHTML = ("nama harap diisi");
+        } else {
+            document.getElementById("namaa").innerHTML = ("");
+        }
+
+        let isi_email = document.getElementById("emailAdress").value;
+        if (isi_email == "") {
+            document.getElementById("emaill").innerHTML = ("email wajib diisi");
+        } else if (isi_email.lenght == "@gmail.com"){
+            document.getElementById("emaill").innerHTML =("email tidak valid");
+        } else {
+            document.getElementById("emaill").innerHTML =("");
+        }
+
+        let isi_jam = document.getElementById("waktu").value;
+        if (isi_jam == "") {
+            document.getElementById("waktuu").innerHTML = ("waktu harap diisi");
+        } else {
+            document.getElementById("waktuu").innerHTML = ("");
+        }
+
+        let isi_tujuan = document.getElementById("tujuan").value;
+        if (isi_tujuan == "") {
+            document.getElementById("tujuann").innerHTML = ("tujuan harap diisi");
+        } else {
+            document.getElementById("tujuann").innerHTML = ("");
+        }
+
+        let isi_tiket = document.getElementById("jumlah").value;
+        if (isi_tiket == "") {
+            document.getElementById("jumlahh").innerHTML = ("jumlah tiket wajib diisi");
+        } else {
+            document.getElementById("jumlahh").innerHTML = (" ");
+        }
+
+
+        let hasilnm = document.getElementById("nama").value;
+        let hasileml = document.getElementById("emailAdress").value;
+        let hasiljam = document.getElementById("waktu").value;
+        let hasiltjn = document.getElementById("tujuan").value;
+        let hasiltk = document.getElementById("jumlah").value;
+
+        document.getElementById("hasilnm").innerHTML = hasilnm ;
+        document.getElementById("hasileml").innerHTML = hasileml;
+        document.getElementById("hasiljam").innerHTML = hasiljam;
+        document.getElementById("hasiltjn").innerHTML = hasiltjn;
+        document.getElementById("hasiltk").innerHTML = hasiltk;
+
+    }
+         
+</script>
+</head>
+<body>
+    <h1 align="center">Selamat Datang</h1>
+    <hr> <br> 
+    <div class="container">
+        <form action="" onsubmit="return false">
+            <div class="label">
+            <label for="nama">Nama Pelanggan</label>
+            </div>
+
+            <div class="form">
+            <input type="text" id="nama" maxlength="30" required > 
+            </div> <br>
+            <span id="namaa" ></span>
+
+            <div class="label">
+            <label for="emailAdress">Email</label> 
+            </div>
+
+            <div class="form">
+            <input type="email" id="emailAdress" placeholder="username@gmail.com" pattern=".+@gmail\.com" required>
+            </div> <br>
+            <span id="emaill"></span>
+
+            <div class="label">
+            <label for="waktu">Jam Keberangkatan</label>
+            </div>
+
+            <div class="form">
+            <input type="time" id="waktu" required> 
+            </div> <br>
+            <span id="waktuu"></span>
+
+            <div class="label">
+            <label for="tujuan">Tujuan Keberangkatan</label>
+            </div>
+
+            <div class="form">
+            <input type="text" id="tujuan" required> 
+            </div> <br>
+            <span id="tujuann"></span>
+
+            <div class="label">
+            <label for="jumlah">Jumlah Tiket</label>
+            </div>
+
+            <div class="form">
+            <input type="number" value="1" min="1" max="10" id="jumlah" required>
+            </div> <br>
+            <span id="jumlahh"></span>
+
+            <button type="submit" onclick="valid()">Pesan Sekarang</button>
+        </form>
+    </div>
+    <br>
+    <div class="kotak">
+        <h4>Tiket Pesanan Anda</h4>
+        <p>
+            Nama Pelanggan : <span id="hasilnm"></span> <br>
+            Email : <span id="hasileml"></span> <br>
+            Jam Keberangkatan : <span id="hasiljam"></span> <br>
+            Tujuan Keberangkatan : <span id="hasiltjn"></span> <br>
+            Jumlah Tiket : <span id="hasiltk"></span><br>
+        </p>
+    </div>
+    <style>
+        .form .label {
+            margin-bottom: 20px;
+            width: 325px;
+            position: relative;
+        }
+
+        .form .form  {
+            padding: 15px;
+            width: 100%;
+            border: 1px solid transparent;
+            font-size: 16px;
+            border-radius: 3px ;
+        }
+
+        .kotak {
+            padding: 15px;
+            border: 1px solid black;
+            background-color: #FFEBCD;
+        }
+        
+    </style>
+</body>
+</html>
